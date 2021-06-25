@@ -337,11 +337,11 @@ return new Promise((resolve, reject) => {
 
    $.get(inviteurl,(error, response, data) =>{
      const result = JSON.parse(data)
-      #if(logs)$.log(data)
-      #if(result.data.section[10].key=='mine_input_code') {
-          #invited=4;
-           #}else{
-          #invited=5;
+      if(logs)$.log(data)
+      if(result.data.section[10].key=='mine_input_code') {
+          invited=4;
+           }else{
+          invited=5;
 }
           resolve()
     })
